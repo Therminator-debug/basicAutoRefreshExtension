@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "AutoRefresh",
+    "version": "1.0.0",
+
+    "permissions": ["tabs"],
+
+    "description": "Automatically reset the page on a selected Time Interval",
+
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
