@@ -1,13 +1,24 @@
 {
     "manifest_version": 3,
-    "name": "AutoRefresh",
-    "version": "1.0.0",
-
-    "permissions": ["tabs"],
-
-    "description": "Automatically reset the page on a selected Time Interval",
-
+    "name": "Auto-Refresh Extension",
+    "version": "1.0",
+    "description": "Automatically refreshes a webpage after a set time interval",
+    "permissions": [
+      "tabs"
+    ],
     "action": {
-        "default_popup": "popup.html"
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["popup.js"],
+
+        "matches": [ "<all_urls>" ]
+      }
+    ],
+    
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'",
+      "extension_code": "script-src 'self'; object-src 'self';"
     }
-}
+  }
